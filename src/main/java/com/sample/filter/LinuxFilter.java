@@ -4,9 +4,10 @@ import java.io.IOException;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.ext.Provider;
 
-@Provider
+import org.springframework.stereotype.Component;
+
+@Component
 public class LinuxFilter implements ContainerRequestFilter {
 
   public static final String HEADER = "X-Condition-Linux";

@@ -8,7 +8,7 @@ public class WindowsCondition implements Condition {
 
   @Override
   public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-    return context.getEnvironment().getProperty("os.name").contains("Windows");
+    return context.getEnvironment().getActiveProfiles()[0].equalsIgnoreCase("windows");
   }
 
 }
